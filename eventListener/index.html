@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="name"> Hello </h1>
+
+    <button id ="toggle-color"> Click me</button>
+
+    <script>
+        const n = prompt("Enter name")
+        document.getElementById('name').innerText = "Hello " + n;
+
+        const click = document.getElementById('toggle-color')
+        const name = document.getElementById('name')
+
+        click.addEventListener("click", ()=>{
+            if(name.style.color === 'red'){
+                name.style.color = "blue";
+            }
+            else{
+                name.style.color = "red";
+            }
+        })
+
+    </script>
+</body>
+</html>

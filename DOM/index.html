@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red-color{
+            color: red;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM - Document Object Model</h1>
+    <nav> This is navbar</nav>
+
+    <div class="div">this is div 1</div>
+    <div class="div">this is div 2</div>
+    <p id="paragraph">this is para 1</div>
+    <p id="paragraph">this is para 2</div>
+
+
+
+    <!-- 
+        query selector -> will select the first selectors from top
+        selectors
+        1. tagname
+        2. id #
+        3. class .
+     -->
+    <script>
+        // alert("Welcome")
+        // const name = prompt("Enter your name")
+        // document.write("Welcome " + name)
+        
+        // 1.tagname
+        const div = document.querySelector('div')
+        div.innerHTML = "<h3>Hacked</h3>";
+
+        const id = document.querySelector('#paragraph')
+        id.innerText = "this is new para1"
+
+        const cls = document.querySelector('.div')
+        cls.innerText = "this is new div1"
+
+    </script>
+
+    <script>
+        const para2 = document.getElementById('paragraph');
+        para2.classList.add('red-color');
+    </script>
+</body>
+</html>
