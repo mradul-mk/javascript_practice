@@ -56,5 +56,5 @@ function failure(){
 }
 
 liveLocation.addEventListener("click", async () => {
-    navigator.geolocation.getCurrentPosition(success, failure)
+    navigator.geolocation.getCurrentPosition(success, failure);
 })
