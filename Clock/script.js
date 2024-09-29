@@ -4,6 +4,7 @@ const stopButton = document.getElementById('stop-time')
 const resumeButton = document.getElementById('resume-time')
 const stopWatch = document.getElementById('timer')
 const stopWatchBtn = document.getElementById('stopWatch')
+const stopWatchTimer = document.getElementById('stopWatchTimer')
 
 function getTime(){
     const currTime = new Date();
@@ -29,10 +30,13 @@ stopWatchBtn.addEventListener('click', () => {
     const timerInterval = setInterval(()=>{
         let elapsedTime = Date.now() - startTime;
         elapsedTime = Math.floor(elapsedTime / 1000);
+        
         if(elapsedTime > timer){
             clearInterval(timerInterval);
             alert(`Time ${timer}(secs) has finished`)
         }
+
+        stopWatchTimer.innerText =`Elapsed Time :: ${elapsedTime}`;
 
     } , 1000);
 })
